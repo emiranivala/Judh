@@ -37,5 +37,5 @@ DCUSTOM_RENAME_TAG = getenv("DCUSTOM_RENAME_TAG", "") #Add your default custom r
 WEBSITE_URL = getenv("WEBSITE_URL", "upshrink.com")
 AD_API = getenv("AD_API", "52b4a2cf4687d81e7d3f8f2b7bc2943f618e78cb")
 STRING = getenv("STRING", None)
-YT_COOKIES = getenv("YT_COOKIES", YTBU_COOKIES)
+YT_COOKIES = getenv("YT_COOKIES", YTUB_COOKIES)
 INSTA_COOKIES = getenv("INSTA_COOKIES", INST_COOKIES)
