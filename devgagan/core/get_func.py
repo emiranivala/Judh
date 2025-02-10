@@ -102,7 +102,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
                 )
                 await dm.copy(LOG_GROUP)
                 
@@ -114,7 +114,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
                     reply_to_message_id=topic_id,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
                 )
                 await dm.copy(LOG_GROUP)
             else:
@@ -126,7 +126,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     progress=progress_bar,
                     parse_mode=ParseMode.MARKDOWN,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─      **__Pyro Uploader__**", edit, time.time())
                 )
                 await asyncio.sleep(2)
                 await dm.copy(LOG_GROUP)
@@ -268,7 +268,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
             msg,
             file_name=file_name,
             progress=progress_bar,
-            progress_args=("╭─────────────────────╮\n│      **__Downloading__...**\n├─────────────────────", edit, time.time())
+            progress_args=("╭─      **__Downloading__...**", edit, time.time())
         )
         
         caption = await get_final_caption(msg, sender)
@@ -440,7 +440,7 @@ async def copy_message_with_chat_id(app, userbot, sender, chat_id, message_id, e
             file = await userbot.download_media(
                 msg,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Downloading__...**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─      **__Downloading__...**", edit, time.time())
             )
             file = await rename_file(file, sender)
 
@@ -845,7 +845,7 @@ async def handle_large_file(file, sender, edit, caption):
                 duration=duration,
                 progress=progress_bar,
                 progress_args=(
-                    "╭─────────────────────╮\n│       **__4GB Uploader__ ⚡**\n├─────────────────────",
+                    "╭─       **__4GB Uploader__ ⚡**\n",
                     edit,
                     time.time()
                 )
@@ -859,7 +859,7 @@ async def handle_large_file(file, sender, edit, caption):
                 thumb=thumb_path,
                 progress=progress_bar,
                 progress_args=(
-                    "╭─────────────────────╮\n│      **__4GB Uploader ⚡__**\n├─────────────────────",
+                    "╭─       **__4GB Uploader__ ⚡**\n",
                     edit,
                     time.time()
                 )
@@ -1089,7 +1089,7 @@ async def split_and_upload_file(app, sender, target_chat_id, file_path, caption,
             part_caption = f"{caption} \n\n**Part : {part_number + 1}**"
             await app.send_document(target_chat_id, document=part_file, caption=part_caption, reply_to_message_id=topic_id,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─      **__Pyro Uploader__**\n", edit, time.time())
             )
             await edit.delete()
             os.remove(part_file)  # Cleanup after upload
