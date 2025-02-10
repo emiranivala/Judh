@@ -53,7 +53,6 @@ see our live bot kn telegram to check the features [Advance Content Saver Bot](h
 - **`plan`**: 🗓️ Check our premium plans.
 - **`terms`**: 🥺 Terms and conditions.
 - **`speedtest`**: 🚅 Check the server speed.
-- **`get`**: 🗄️ Get all user IDs.
 - **`lock`**: 🔒 Protect channel from extraction.
 - **`gcast`**: ⚡ Broadcast message to bot users.
 - **`help`**: ❓ Help if you're new.
