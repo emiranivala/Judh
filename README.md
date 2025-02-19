@@ -189,11 +189,10 @@ Your credentials can be stolen if pushed to a public repository. Always keep the
 ## Updates
 
 <details>
-<summary><b>Update: 1 Feb 2025</b></summary>
-  
-- Added support to upload in `topics` (in group)
-- seperated function from direct loop of `get_msg` and `copy_message_with_chat_id` function
-- & some more advancements 
+<summary><b>Update: 14 Feb 2025</b></summary>
+- Removed forced `login` user now can proceed with invite link if they do not want to login in bot due security concerns, BOT OWNER must have to fill `DEFAULT_SESSION` var when deploying.
+- done ✅
+</details>details>
   
 </details>
 <details>
